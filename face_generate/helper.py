@@ -177,7 +177,7 @@ class Dataset(object):
     """
     Dataset
     """
-    def __init__(self, dataset_name, data_files):
+    def __init__(self, dataset_name, data_files,img_size=28):
         """
         Initalize the class
         :param dataset_name: Database name
@@ -185,8 +185,8 @@ class Dataset(object):
         """
         DATASET_CELEBA_NAME = 'celeba'
         DATASET_MNIST_NAME = 'mnist'
-        IMAGE_WIDTH = 28
-        IMAGE_HEIGHT = 28
+        IMAGE_WIDTH = img_size
+        IMAGE_HEIGHT = img_size
 
         if dataset_name == DATASET_CELEBA_NAME:
             self.image_mode = 'RGB'
