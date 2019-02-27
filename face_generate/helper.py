@@ -12,11 +12,7 @@ from tqdm import tqdm
 
 
 def _read32(bytestream):
-    """
-    Read 32-bit integer from bytesteam
-    :param bytestream: A bytestream
-    :return: 32-bit integer
-    """
+   
     dt = np.dtype(np.uint32).newbyteorder('>')
     return np.frombuffer(bytestream.read(4), dtype=dt)[0]
 
